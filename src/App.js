@@ -1,10 +1,12 @@
-import React, { Component } from 'react'
-import FormTest from "./components/FormTest"
+import React from 'react'
+// import Test from "./components/common/CheckBoxGroup/Test"
+// import Test from "./components/common/RadioBoxGroup/Test"
+import Test from "./components/common/Select/Test"
 
-export default class App extends Component {
-
-
-    render() {
-        return <FormTest />
-    }
+export default function App() {
+    return (
+        <div>
+            <Test/>
+        </div>
+    )
 }
