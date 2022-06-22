@@ -1,9 +1,10 @@
-import { createStore, bindActionCreators } from "../redux";
+import { createStore, bindActionCreators, applyMiddleware } from "../redux";
 import reducer from "./reducer"
 import { createAddUserAction, createDeleteUserAction } from "./action/usersAction"
+import logger from "redux-logger"
 
 
-const store = createStore(reducer);
+const store = createStore(reducer, applyMiddleware(logger));
 
 const actionCreators = {
     addUser: createAddUserAction,
@@ -11,10 +12,6 @@ const actionCreators = {
 }
 
 const actions = bindActionCreators(actionCreators, store.dispatch)
-
-store.subscribe(() => {
-    console.log("监听器1", store.getState());
-})
 
 actions.addUser({ id: 3, name: "abc", age: 111 })
 actions.deleteUser(3)
