@@ -1,6 +1,9 @@
 import store from "./index"
-import { fetchUsers } from "./action/usersAction"
+import { change } from "./action/student/searchCondition"
+import { fetchStudents } from "./action/student/searchResult"
+// store.dispatch(change({
+//     key: "abc",
+//     page: 2
+// }))
 
-store.dispatch(fetchUsers()).then(()=>{
-    console.log("加载完成")
-});
+store.dispatch(fetchStudents())
