@@ -33,5 +33,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://api.duyiedu.com"
+  "proxy": "http://api.duyiedu.com",
+  "devDependencies": {
+    "typescript": "^3.5.3"
+  }
 }
